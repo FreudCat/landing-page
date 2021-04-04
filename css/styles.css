@@ -5,39 +5,25 @@
 font-family: 'Montserrat', sans-serif;*/
 
 body {
-  padding-top: 30vh;  /*prevents navbar from covering the next div*/
+  margin: 0;
 }
 
-
-#image-links {
-  border:1px black solid; 
-}
-
-.img-link-rmv{
-  border: 1px red solid; 
-  text-align: center;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto; 
-}
-
-.img-link-rmv img {
-  width: 250px; 
-}
-
-.navbar-custom { 
-  padding-left: 20px; 
-  height: 30vh; 
+#navbar {
   background-color: #fc4445;
+  height: 20vh;
+  padding-left: 5vh; 
+  padding-top: 5vh;
 }
 
-.navbar-custom .navbar-brand {
-  color: white; 
-}
-
-.navbar-nav a {
+#navbar .nav-link {
+  text-decoration: none;
+  font-family: "Dela Gothic One", cursive;
   color: #000000; 
-  font-family: 'Dela Gothic One', cursive;
-} 
+}
+
+#brand-logo {
+  text-decoration: none;
+  font-family: "Dela Gothic One", cursive;
+  color: #ffffff; 
+  font-size: 1.2em; 
+}
