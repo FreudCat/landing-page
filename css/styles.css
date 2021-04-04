@@ -4,6 +4,28 @@
 /*font-family: 'Dela Gothic One', cursive;
 font-family: 'Montserrat', sans-serif;*/
 
+body {
+  padding-top: 30vh;  /*prevents navbar from covering the next div*/
+}
+
+
+#image-links {
+  border:1px black solid; 
+}
+
+.img-link-rmv{
+  border: 1px red solid; 
+  text-align: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto; 
+}
+
+.img-link-rmv img {
+  width: 250px; 
+}
 
 .navbar-custom { 
   padding-left: 20px; 
