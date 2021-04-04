@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat&display=swap);
+@import "./style-sml.css";
+
+/*font-family: 'Dela Gothic One', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+
+.navbar-custom { 
+  padding-left: 20px; 
+  height: 30vh; 
+  background-color: #fc4445;
+}
+
+.navbar-custom .navbar-brand {
+  color: white; 
+}
+
+.navbar-nav a {
+  color: #000000; 
+  font-family: 'Dela Gothic One', cursive;
+} 
