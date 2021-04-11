@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat&display=swap);
-@import "./style-sml.css";
+
 
 /*font-family: 'Dela Gothic One', cursive;
 font-family: 'Montserrat', sans-serif;*/
@@ -8,22 +8,196 @@ body {
   margin: 0;
 }
 
-#navbar {
-  background-color: #fc4445;
-  height: 20vh;
-  padding-left: 5vh; 
-  padding-top: 5vh;
+p {
+  margin:0; 
 }
 
-#navbar .nav-link {
-  text-decoration: none;
-  font-family: "Dela Gothic One", cursive;
-  color: #000000; 
+img {
+  max-width: 100%;
 }
 
+.fas {
+  color: #fc4445; 
+  font-size: 2em;  
+}
+
+.flex-card:hover {
+  box-shadow: 0 0 12px 2px #ffa9a9;
+}
+
+.center-align {
+  text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+
+  .container { 
+    display: grid; 
+    width: 100vw; 
+    margin: auto; 
+    grid-template-columns: 100vw;
+    grid-template-rows: 20vh 30vh 10vh auto 10vh; 
+    grid-template-areas:
+    "nav"
+    "card-nav"
+    "hdr"
+    "content"
+    "footer";
+    justify-content: center;
+  }
+
+  
 #brand-logo {
   text-decoration: none;
   font-family: "Dela Gothic One", cursive;
-  color: #ffffff; 
+  color: #fc4445; 
   font-size: 1.2em; 
+}
+
+  #navbar {
+    grid-area: nav;  
+    padding-left: 5vh; 
+    padding-top: 5vh;
+    margin: 0 px;  
+    border: 10px pink solid; 
+  }
+
+  #navbar .nav-link {
+    text-decoration: none;
+    font-family: "Dela Gothic One", cursive;
+    color: #000000; 
+    display: none; 
+  }
+
+  #card-nav {
+    grid-area: card-nav; 
+    display: grid;
+    width: 100vw; 
+    grid-template-columns: 20vw 20vw 20vw; 
+    grid-template-rows: auto;
+    grid-template-areas:
+    "card1 card2 card3";
+    justify-content: center;
+    z-index: 100; 
+    border: 1px solid black;
+    margin: 0; 
+  }
+
+  #card1 {
+    grid-area: card1;
+    height: 15vh;
+  }
+
+  #card2 {
+    grid-area: card2;
+    height: 15vh;
+  }
+
+  #card3 {
+    grid-area: card3;
+    height: 15vh; 
+  }
+
+  
+.flex-card {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px; 
+  border: 2px solid #fc4445; 
+  /*box-shadow: 0 0 2px 2px #ffa9a9;*/
+  width: 15vw;
+  justify-content: center;
+  font-size: 0.7em; 
+  margin: 0 auto; /*no margin on top and bottom, but centered horizontally*/
+}
+
+  #hdr {
+    grid-area: hdr;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #content {
+    grid-area: content;
+    display: grid;
+    width: 100vw; 
+    grid-template-columns: auto; 
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "content1"
+    "content2"
+    "content3";
+    border: 1px solid black;
+    margin: 0px; 
+    justify-content: center;
+  }
+
+  #content1 {
+    grid-area: content1;
+    display: grid;
+    width: 100vw; 
+    grid-template-columns: 30vw 70vw; 
+    grid-template-rows: 100vh;
+    grid-template-areas:
+    "text1 elephant1"; 
+  }
+
+  #elephant1 {
+    grid-area: elephant1;
+  }
+  
+  #text1 {
+    grid-area: text1; 
+
+  }
+
+
+
+  #content2 {
+    grid-area: content2;
+    display: grid;
+    width: 100vw; 
+    grid-template-columns: 70vw 30vw; 
+    grid-template-rows: 100vh;
+    grid-template-areas:
+    "elephant2 text2"; 
+  }
+
+  #elephant2 {
+    grid-area: elephant2;
+  }
+  
+  #text2 {
+    grid-area: text2; 
+
+  }
+
+
+  #content3 {
+    grid-area: content3;
+    display: grid;
+    width: 100vw; 
+    grid-template-columns: 30vw 70vw; 
+    grid-template-rows: 100vh;
+    grid-template-areas:
+    "text3 elephant3"; 
+  }
+
+  #elephant3 {
+    grid-area: elephant3;
+  }
+  
+  #text3 {
+    grid-area: text3; 
+
+  }
+
+
+  .content-img {
+    display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  }
+
 }
