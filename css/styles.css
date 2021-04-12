@@ -56,10 +56,13 @@ img {
 
   #navbar {
     grid-area: nav;  
-    padding-left: 5vh; 
-    padding-top: 5vh;
+    padding-top: 5vh; 
+    padding-left: 5vh;
     margin: 0 px;  
-    border: 10px pink solid; 
+    position: fixed; 
+    background-color: #fff; 
+    height: 10vh; 
+    width: 100vw; 
   }
 
   #navbar .nav-link {
@@ -79,8 +82,11 @@ img {
     "card1 card2 card3";
     justify-content: center;
     z-index: 100; 
-    border: 1px solid black;
     margin: 0; 
+    position: fixed; 
+    top: 15vh; 
+    background-color: #fff; 
+    /*box-shadow: 0px 10px 10px rgb(146, 145, 145);*/
   }
 
   #card1 {
@@ -105,7 +111,7 @@ img {
   align-items: center;
   border-radius: 5px; 
   border: 2px solid #fc4445; 
-  /*box-shadow: 0 0 2px 2px #ffa9a9;*/
+  box-shadow: 0 0 2px 2px #ffa9a9;
   width: 15vw;
   justify-content: center;
   font-size: 0.7em; 
@@ -127,7 +133,6 @@ img {
     "content1"
     "content2"
     "content3";
-    border: 1px solid black;
     margin: 0px; 
     justify-content: center;
   }
@@ -136,7 +141,7 @@ img {
     grid-area: content1;
     display: grid;
     width: 100vw; 
-    grid-template-columns: 30vw 70vw; 
+    grid-template-columns: 25vw 70vw; 
     grid-template-rows: 100vh;
     grid-template-areas:
     "text1 elephant1"; 
@@ -148,16 +153,13 @@ img {
   
   #text1 {
     grid-area: text1; 
-
   }
-
-
 
   #content2 {
     grid-area: content2;
     display: grid;
     width: 100vw; 
-    grid-template-columns: 70vw 30vw; 
+    grid-template-columns: 70vw 25vw; 
     grid-template-rows: 100vh;
     grid-template-areas:
     "elephant2 text2"; 
@@ -177,7 +179,7 @@ img {
     grid-area: content3;
     display: grid;
     width: 100vw; 
-    grid-template-columns: 30vw 70vw; 
+    grid-template-columns: 25vw 70vw; 
     grid-template-rows: 100vh;
     grid-template-areas:
     "text3 elephant3"; 
@@ -189,15 +191,34 @@ img {
   
   #text3 {
     grid-area: text3; 
-
   }
 
-
   .content-img {
-    display: flex; 
+  display: flex; 
   flex-direction: row;
   align-items: center;
   justify-content: center;
   }
 
+  #footer {
+    grid-area: footer; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed; 
+    bottom: 0; 
+    background-color: #fff;
+    height: 18vh; 
+    width: 100vw; 
+    box-shadow: 0px -2px 15px rgb(204, 204, 204);
+  }
+
+  .ftr-icon-pad {
+    padding: 0 10px 30px 10px;
+    color: #fc4445;
+  }
+  
+  .ftr-icon-pad:hover {
+    color: #f75;
+  }
 }
