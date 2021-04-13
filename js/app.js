@@ -8,15 +8,22 @@ function createDynamicNav() {
     let createNavLinks = document.createElement("li"); //creates an <li> node
     let createAnchorTag = document.createElement("a"); //creats an <a> (anchor) node
     createNavLinks.appendChild(createAnchorTag); //appends the anchor tag between each <li></li> 
+    let linkName = navLinks[i].innerHTML; //takes the text WITHIN the h2 tags that makes up the content titles
 
-    
+    createAnchorTag.href=("#content" + (i+1)); //output is content1, content2, content3 as for loop iterates through
+    createAnchorTag.textContent = `${linkName}`;
+    createNavUL.appendChild(createNavLinks); 
 
-    console.log(contentSection[i]); //for testing purposes
+    console.log(linkName); //for testing purposes
   }
+
   
   
+  navbar.appendChild(createNavUL); 
   return console.log(navLinks[0].innerHTML); //for testing 
 }
+
+createDynamicNav(); 
 
 function scrollToContent(card) {
   let contentID; 
@@ -37,9 +44,7 @@ function scrollToContent(card) {
 //  selectedCard.setAttribute("style", "box-shadow: 0px 10px 10px rgb(146, 145, 145)"); 
 }
 
-
-
-createDynamicNav(); //for testing
+//for testing
 
 
 

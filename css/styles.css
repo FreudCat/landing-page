@@ -36,7 +36,7 @@ img {
     width: 100vw; 
     margin: auto; 
     grid-template-columns: 100vw;
-    grid-template-rows: 10vh auto 10vh; 
+    grid-template-rows: 20vh auto 10vh; 
     grid-template-areas:
     "card-nav"
     "content"
@@ -63,6 +63,28 @@ img {
   
   #navbar {
     grid-area: card-nav; 
+    margin-top: 10vh; 
+    display: flex;  
+    justify-content: center;
+    background-color: blue;
+    position: fixed; 
+    width: 100vw; 
+  }
+
+  ul {
+    padding: 0; 
+  }
+
+  li {
+    list-style: none;
+    display: inline-flex;
+    padding: 0 20px; /*separates out the links*/
+    
+  }
+  li a {
+    text-decoration: none;
+    display: inline-flex;
+    color: white; 
   }
 
   /* #navbar {
