@@ -36,25 +36,36 @@ img {
     width: 100vw; 
     margin: auto; 
     grid-template-columns: 100vw;
-    grid-template-rows: 20vh 30vh 10vh auto 10vh; 
+    grid-template-rows: 10vh auto 10vh; 
     grid-template-areas:
-    "nav"
     "card-nav"
-    "hdr"
     "content"
     "footer";
     justify-content: center;
   }
 
-  
+  #hdr{
+    grid-area: hdr; 
+    border: 1px black solid; 
+    position: fixed; 
+    width: 100vw; 
+    padding: 3vh 0;  
+  }
+
 #brand-logo {
-  text-decoration: none;
+  display: flex; 
+  justify-content: center;
+  text-decoration: none; 
   font-family: "Dela Gothic One", cursive;
   color: #fc4445; 
   font-size: 1.2em; 
 }
-
+  
   #navbar {
+    grid-area: card-nav; 
+  }
+
+  /* #navbar {
     grid-area: nav;  
     padding-top: 5vh; 
     padding-left: 5vh;
@@ -63,14 +74,14 @@ img {
     background-color: #fff; 
     height: 10vh; 
     width: 100vw; 
-  }
+  } */
 
-  #navbar .nav-link {
+  /* #navbar .nav-link {
     text-decoration: none;
     font-family: "Dela Gothic One", cursive;
     color: #000000; 
     display: none; 
-  }
+  } */
 
   #card-nav {
     grid-area: card-nav; 

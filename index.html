@@ -11,17 +11,18 @@
 
 <body>
 
-<div class="container">
-
-  
-  <nav id="navbar">
+  <header id="hdr">
     <a href="#" id="brand-logo">PNW Brand</a>
-    <a href="#" class="nav-link">Home</a>
-    <a href="#footer" class="nav-link">Contact</a>
-  </nav>
+    <!--Creating div for dynamic creation of nav items-->
+  </header>
+
+<div class="container">
+  <div id="navbar"></div>
   
-  <div id="card-nav">
-    <div id="card1" class="flex-card">
+  
+ 
+  <!-- <div id="card-nav">
+    <div id="card1" class="flex-card" onclick="scrollToContent('card1')">
       <i class="fas fa-archive"></i>
       <h3>Section 1</h3>
       <p class=center-align>Information for section 1</p>
@@ -36,38 +37,38 @@
       <h3>Section 3</h3>
       <p class=center-align>Information for section 1</p>
     </div>
-  </div>
+  </div>  -->
 <!-- 
   <header id="hdr">
     <h1 id="header-text" class="center-align">This Is Your Header</h1>
   </header> -->
   
   <section id="content">
-      <div id="content1" class="content-img">
+      <div id="content1" class="content-section content-img"> <!--content-section used to populate the dynamic nav bar-->
         <img src="multimedia/images/elephant-R.png" alt="element facing left" id="elephant1">
         <div id="text1" class="content-font center-align">
           <h2>Content 1</h2>
           <p>When you come to a fork in the road, take it.</p>
         </div>
       </div>
-      <div id="content2" class="content-img">
+      <div id="content2" class="content-section content-img">
         <img src="multimedia/images/elephant-L.png" alt="element facing straight" id="elephant2">
         <div id="text2" class="content-font center-align">
-          <h2>Content 1</h2>
+          <h2>Content 2</h2>
           <p>You can observe a lot just by watching.</p>
         </div>
       </div>
-      <div id="content3" class="content-img">
+      <div id="content3" class="content-section content-img">
         <img src="multimedia/images/elephant-S.png" alt="element facing right" id="elephant3">
         <div id="text3" class="content-font center-align">
-          <h2>Content 1</h2>
+          <h2>Content 3</h2>
           <p>If you don't know where you're going, you'll end up somewhere else.</p>
         </div>
       </div>
   </section>
 
   <footer id="footer"> <!--Will be on all pages except subscribe page-->
-      <h2>Contact</h2>
+      <h3>Contact</h3>
       <div id="display-inline">
         <a href="https://github.com/FreudCat/personal-blog"><i class="fab fa-github-square fa-2x ftr-icon-pad"></i></a>
         <a href="www.linkedin.com/in/angelanguyendvm"><i class="fab fa-linkedin-in fa-2x ftr-icon-pad"></i></a>
