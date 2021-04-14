@@ -1,6 +1,7 @@
+const contentSection = document.querySelectorAll(".content-section"); //selects all of the content-section class and populates them into a node list that looks like array, but is NOT array.
 
 function createDynamicNav() {
-  const contentSection = document.querySelectorAll(".content-section"); //selects all of the content-section class and populates them into a node list that looks like array, but is NOT array.  
+   
   const navLinks = document.querySelectorAll("h2");
   const createNavUL = document.createElement("ul"); 
 
@@ -44,8 +45,47 @@ function scrollToContent(card) {
 //  selectedCard.setAttribute("style", "box-shadow: 0px 10px 10px rgb(146, 145, 145)"); 
 }
 
-//for testing
-
-
 
 //document.getElementById("card1").addEventListener("click", scroll); //Do NOT put scroll() since the () immediately calls the function and it will fire automatically without waiting for the event!!
+
+function contentInView(content) { //function will determine if content section is in view 
+  let position = content.getBoundingClientRect(); //run console.log(position); to see the values of position.top, position.bottom, etc and use for the expressions below
+  return (
+    position.top <= window.innerHeight*.18 && 
+    (position.bottom <= window.innerHeight*1.3 && position.bottom > window.innerHeight*.18)
+  ); //returns boolean True if the content is in viewport or False if not
+}
+
+
+window.addEventListener("scroll", function(){
+  for (let i = 0; i < contentSection.length; i++) {
+    if (contentInView(contentSection[i]) === true) {
+      console.log("true"); 
+    }
+    else {
+      console.log("no"); 
+    }
+  }
+})
+
+
+
+
+
+//window.addEventListener("scroll", contentInView(content2))
+
+// window.addEventListener("scroll", function() {
+   
+
+//    if(position.top <= window.innerHeight*.18 && (position.bottom <= window.innerHeight*1.3 && position.bottom > window.innerHeight*.18))   {
+//      console.log("element 2 here"); 
+//    }
+//    else {
+//      console.log("not here"); 
+//    }
+//    console.log(position); 
+// });
+
+console.log(window.innerHeight*.18); 
+console.log(window.innerHeight*1.3); 
+console.log(window.innerHeight*.18); 

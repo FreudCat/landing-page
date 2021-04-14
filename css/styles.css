@@ -45,7 +45,6 @@ img {
 
   #hdr{
     grid-area: hdr; 
-    border: 1px black solid; 
     position: fixed; 
     width: 100vw; 
     padding: 3vh 0;  
@@ -159,7 +158,7 @@ img {
     display: grid;
     width: 100vw; 
     grid-template-columns: auto; 
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, 100vh);
     grid-template-areas:
     "content1"
     "content2"
