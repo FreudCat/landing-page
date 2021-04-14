@@ -15,13 +15,13 @@ function createDynamicNav() {
     createAnchorTag.textContent = `${linkName}`;
     createNavUL.appendChild(createNavLinks); 
 
-    console.log(linkName); //for testing purposes
+    
   }
 
   
   
   navbar.appendChild(createNavUL); 
-  return console.log(navLinks[0].innerHTML); //for testing 
+  
 }
 
 createDynamicNav(); 
@@ -59,16 +59,31 @@ function contentInView(content) { //function will determine if content section i
 
 window.addEventListener("scroll", function(){
   const activeLink = document.querySelectorAll("li"); 
+  const navColor = document.querySelector("#navbar"); 
+  const hdrColor = document.querySelector("#hdr"); 
 
   for (let i = 0; i < contentSection.length; i++) {
     if (contentInView(contentSection[i]) === true) {
       activeLink[i].classList.add("highlight"); //note that there is no period prior to the class since you are specifically saying to add it as a class!
+      if (contentSection[i].id == "content1") {
+        navColor.style.backgroundColor = "rgb(34, 121, 235)";
+        hdrColor.style.backgroundColor = "rgb(34, 121, 235)"; 
+      }
+      else if (contentSection[i].id == "content2") {
+        navColor.style.backgroundColor = "rgb(0, 146, 73)";
+        hdrColor.style.backgroundColor = "rgb(0, 146, 73)";
+      }
+      else {
+        navColor.style.backgroundColor = "rgb(252, 109, 133)";
+        hdrColor.style.backgroundColor = "rgb(252, 109, 133)";
+      }
     }
     else {
       activeLink[i].classList.remove("highlight"); 
+      
     }
   }
-  console.log(activeLink); 
+  console.log(contentSection[0].id); 
 })
 
 
