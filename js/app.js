@@ -58,14 +58,17 @@ function contentInView(content) { //function will determine if content section i
 
 
 window.addEventListener("scroll", function(){
+  const activeLink = document.querySelectorAll("li"); 
+
   for (let i = 0; i < contentSection.length; i++) {
     if (contentInView(contentSection[i]) === true) {
-      console.log("true"); 
+      activeLink[i].classList.add("highlight"); //note that there is no period prior to the class since you are specifically saying to add it as a class!
     }
     else {
-      console.log("no"); 
+      activeLink[i].classList.remove("highlight"); 
     }
   }
+  console.log(activeLink); 
 })
 
 
@@ -86,6 +89,3 @@ window.addEventListener("scroll", function(){
 //    console.log(position); 
 // });
 
-console.log(window.innerHeight*.18); 
-console.log(window.innerHeight*1.3); 
-console.log(window.innerHeight*.18); 

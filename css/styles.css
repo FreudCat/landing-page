@@ -254,4 +254,8 @@ img {
   .ftr-icon-pad:hover {
     color: #f75;
   }
+
+  .highlight {
+    font-weight: bold; 
+  }
 }
