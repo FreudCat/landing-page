@@ -32,6 +32,11 @@ function scrollToTop() { //shows button that that scrolls to top under the fold
   //
 }
 
+function onClickScroll () { //function is called when the scroll to top button is clicked
+  // window.scrollTo(0, 0);
+  document.getElementById("content1").scrollIntoView({behavior: "smooth"}) 
+}
+
 function contentInView(content) { //function will determine if content section is in view 
   let position = content.getBoundingClientRect(); //run console.log(position); to see the values of position.top, position.bottom, etc and use for the expressions below
   return (
