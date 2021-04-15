@@ -26,10 +26,27 @@ function contentInView(content) { //function will determine if content section i
     (position.bottom <= window.innerHeight*1.3 && position.bottom > window.innerHeight*.22)
   ); //returns boolean True if the content is in viewport or False if not
 }
+let quietPosition = window.scrollY; //needs to be outside function since the function will the value below 
+function hideNav() {
+  let scrollPosition = window.scrollY; 
+  console.log(quietPosition); 
+  console.log(scrollPosition); 
+  if (quietPosition > scrollPosition) { //this will indicate when the use is scrolling down
+    document.getElementById("hdr").style.top = "0"; 
+    console.log("quiet > scroll"); 
+  }
+  else {
+    document.getElementById("hdr").style.top = "-200px"; 
+    console.log("else");  //scrolling up 
+  }
+  quietPosition = scrollPosition; 
+}//end hidenav
+
+
 
 window.addEventListener("scroll", function(){
-  const navColor = document.querySelector("#navbar"); 
   const hdrColor = document.querySelector("#hdr"); 
+  const navColor = document.querySelector("#navbar"); 
   const activeLink = document.querySelectorAll("li");
 
   for (let i = 0; i < contentSection.length; i++) {
@@ -51,7 +68,8 @@ window.addEventListener("scroll", function(){
     else {
       activeLink[i].classList.remove("highlight"); 
     }
-  }
+  } 
+  hideNav(); 
 })
 
 function scrollToContent(card) {
@@ -71,6 +89,11 @@ function scrollToContent(card) {
 }
 
 
-//document.getElementById("card1").addEventListener("click", scroll); Do NOT put scroll() since the () immediately calls the function and it will fire automatically without waiting for the event!!
+
+
+
 createDynamicNav(); 
+
+
+//document.getElementById("card1").addEventListener("click", scroll); Do NOT put scroll() since the () immediately calls the function and it will fire automatically without waiting for the event!!
 
