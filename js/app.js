@@ -26,21 +26,17 @@ function contentInView(content) { //function will determine if content section i
     (position.bottom <= window.innerHeight*1.3 && position.bottom > window.innerHeight*.22)
   ); //returns boolean True if the content is in viewport or False if not
 }
-let quietPosition = window.scrollY; //needs to be outside function since the function will the value below 
+
+//shows navigation bar when scrolling, hides when inactive
 function hideNav() {
-  let scrollPosition = window.scrollY; 
-  console.log(quietPosition); 
-  console.log(scrollPosition); 
-  if (quietPosition > scrollPosition) { //this will indicate when the use is scrolling down
     document.getElementById("hdr").style.top = "0"; 
     console.log("quiet > scroll"); 
-  }
-  else {
-    document.getElementById("hdr").style.top = "-200px"; 
-    console.log("else");  //scrolling up 
-  }
-  quietPosition = scrollPosition; 
-}//end hidenav
+    setTimeout(hideNavOnPause, 1800); //1.8 seconds of inactivity will cause the navbar to hide 
+}
+
+function hideNavOnPause() {
+  document.getElementById("hdr").style.top = "-200px"; 
+}
 
 
 

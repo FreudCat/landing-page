@@ -224,6 +224,7 @@ img {
     width: 100vw; 
     padding: 3vh 0;  
     background-color: rgb(34, 121, 235);
+    transition: 0.3s; 
   }
 
 #brand-logo {
@@ -236,7 +237,6 @@ img {
 }
   
   #navbar {
-    margin-top: 10vh; 
     display: flex;  
     justify-content: center;
     background-color: rgb(34, 121, 235);    
