@@ -41,6 +41,11 @@ img {
   font-weight: bold; 
 }
 
+.hide-button {
+  opacity: 0; 
+  transition: opacity 1s; 
+}
+
 @media only screen and (max-width: 450px) {
 
   .container { 
@@ -53,7 +58,6 @@ img {
     "content"
     "footer";
     justify-content: center;
-    overflow: auto; 
   }
 
   #hdr{
@@ -202,6 +206,14 @@ img {
   .ftr-icon-pad:hover {
     color: rgb(5, 5, 5);
   }
+
+  #up-button {
+    position: fixed; 
+    bottom: 7vh; 
+    left: 80vw;  
+    transition: opacity 1s; 
+  }
+
 }
 
 @media screen and (min-width: 451px) {

@@ -1,5 +1,6 @@
 const contentSection = document.querySelectorAll(".content-section"); //selects all of the content-section class and populates them into a node list that looks like array, but is NOT array.
 
+
 function createDynamicNav() {
   const navLinks = document.querySelectorAll("h2");
   const createNavUL = document.createElement("ul"); 
@@ -19,6 +20,18 @@ function createDynamicNav() {
   document.querySelector("#navbar").style.backgroundImage = "linear-gradient(rgb(34, 121, 235), 90%, skyblue)"; 
 }
 
+function scrollToTop() { //shows button that that scrolls to top under the fold 
+    let icon = document.querySelector(".fa-chevron-circle-up"); 
+
+  if (content.getBoundingClientRect().top < -325) { 
+    icon.classList.remove("hide-button"); 
+  }
+  else {
+    icon.classList.add("hide-button"); 
+  }
+  //
+}
+
 function contentInView(content) { //function will determine if content section is in view 
   let position = content.getBoundingClientRect(); //run console.log(position); to see the values of position.top, position.bottom, etc and use for the expressions below
   return (
@@ -29,8 +42,7 @@ function contentInView(content) { //function will determine if content section i
 
 //shows navigation bar when scrolling, hides when inactive
 function hideNav() {
-    document.getElementById("hdr").style.top = "0"; 
-    console.log("quiet > scroll"); 
+    document.getElementById("hdr").style.top = "0";  
     setTimeout(hideNavOnPause, 1800); //1.8 seconds of inactivity will cause the navbar to hide 
 }
 
@@ -51,6 +63,7 @@ window.addEventListener("scroll", function(){
       if (contentSection[i].id == "content1") {
         hdrColor.style.backgroundColor = "rgb(34, 121, 235)";
         navColor.style.backgroundImage = "linear-gradient(rgb(34, 121, 235), 90%, skyblue)"; 
+         
       }
       else if (contentSection[i].id == "content2") {
         navColor.style.backgroundImage = "linear-gradient(rgb(0, 146, 73), 90%, springgreen)"; 
@@ -59,13 +72,15 @@ window.addEventListener("scroll", function(){
       else {
         navColor.style.backgroundImage = "linear-gradient(rgb(252, 109, 133), 90%, pink)";
         hdrColor.style.backgroundColor = "rgb(252, 109, 133)";
+       
       }
     }
     else {
       activeLink[i].classList.remove("highlight"); 
     }
   } 
-  hideNav(); 
+  hideNav();
+  scrollToTop(); 
 })
 
 function scrollToContent(card) {
