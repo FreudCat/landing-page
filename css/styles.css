@@ -1,21 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat&display=swap);
-
-
-/*font-family: 'Dela Gothic One', cursive;
-font-family: 'Montserrat', sans-serif;*/
-
-
+/*styles used by all viewport sizes */
 body {
   margin: 0;
 }
 
 p {
-  margin:0; 
+  margin:0;
 }
 
-h2, 
-h3, 
-p, 
+button,
+h3,
+p,
 a {
   font-family: 'Montserrat', sans-serif;
 }
@@ -25,35 +20,27 @@ img {
 }
 
 .fas {
-  color: #fc4445; 
+  color: #fc4445;
   font-size: 2em;  
-}
-
-.flex-card:hover {
-  box-shadow: 0 0 12px 2px #ffa9a9;
 }
 
 .center-align {
   text-align: center;
 }
 
-.highlight {
-  font-weight: bold; 
-}
-
 .hide-button {
-  opacity: 0; 
-  transition: opacity 1s; 
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 @media only screen and (max-width: 450px) {
 
-  .container { 
-    display: grid; 
-    width: 100vw; 
-    margin: auto; 
+  .container {
+    display: grid;
+    width: 100vw;
+    margin: auto;
     grid-template-columns: 100vw;
-    grid-template-rows: auto 10vh; 
+    grid-template-rows: auto 10vh;
     grid-template-areas:
     "content"
     "footer";
@@ -61,32 +48,34 @@ img {
   }
 
   #hdr{
-    position: fixed; 
-    width: 100vw; 
-    padding: 3vh 0;  
+    position: fixed;
+    width: 100vw;
+    height: 12vh;
+    padding: 3vh 0;
     background-color: rgb(34, 121, 235);
-    transition: 0.4s; 
+    transition: 0.4s;
+    font-family: 'Montserrat', sans-serif;
   }
 
-#brand-logo {
-  display: flex; 
-  justify-content: center;
-  text-decoration: none; 
-  font-family: "Dela Gothic One", cursive;
-  color: #fff; 
-  font-size: 1.2em; 
-}
-  
-  #navbar { 
-    display: flex;  
+  #brand-logo {
+    display: flex;
     justify-content: center;
-    background-color: rgb(34, 121, 235);    
-    position: fixed; 
-    width: 100vw; 
+    text-decoration: none;
+    font-family: "Dela Gothic One", cursive;
+    color: #fff;
+    font-size: 1.2em;
+  }
+  
+  #navbar {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
   }
 
   ul {
-    padding: 0; 
+    padding: 0;
   }
 
   li {
@@ -98,36 +87,36 @@ img {
   li a {
     text-decoration: none;
     display: inline-flex;
-    color: white; 
+    color: white;
   }
 
-  #hdr {
-    grid-area: hdr;
-    font-family: 'Montserrat', sans-serif;
+  .highlight {
+    font-weight: bolder;
+    font-size: 1.1em;
   }
 
   #content {
     grid-area: content;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: auto; 
+    width: 100vw;
+    grid-template-columns: auto;
     grid-template-rows: repeat(3, 100vh);
     grid-template-areas:
     "content1"
     "content2"
     "content3";
-    margin: 0px; 
+    margin: 0px;
     justify-content: center;
   }
 
   #content1 {
     grid-area: content1;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: 25vw 70vw; 
+    width: 100vw;
+    grid-template-columns: 35vw 60vw;
     grid-template-rows: 100vh;
     grid-template-areas:
-    "text1 elephant1"; 
+    "text1 elephant1";
     background: linear-gradient(skyblue, 92%, springgreen);
   }
 
@@ -136,17 +125,17 @@ img {
   }
   
   #text1 {
-    grid-area: text1; 
+    grid-area: text1;
   }
 
   #content2 {
     grid-area: content2;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: 70vw 25vw; 
+    width: 100vw;
+    grid-template-columns: 60vw 35vw;
     grid-template-rows: 100vh;
     grid-template-areas:
-    "elephant2 text2"; 
+    "elephant2 text2";
     background: linear-gradient(springgreen, 93%, pink);
   }
 
@@ -155,16 +144,14 @@ img {
   }
   
   #text2 {
-    grid-area: text2; 
-
+    grid-area: text2;
   }
-
 
   #content3 {
     grid-area: content3;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: 25vw 70vw; 
+    width: 100vw;
+    grid-template-columns: 35vw 60vw;
     grid-template-rows: 100vh;
     grid-template-areas:
     "text3 elephant3"; 
@@ -176,7 +163,7 @@ img {
   }
   
   #text3 {
-    grid-area: text3; 
+    grid-area: text3;
   }
 
   .content-img {
@@ -187,14 +174,14 @@ img {
   }
 
   #footer {
-    grid-area: footer; 
+    grid-area: footer;
     display: flex;
     align-items: center;
     flex-direction: column;
-    bottom: 0; 
+    bottom: 0;
     background-color: #fff;
-    height: 25vh; 
-    width: 100vw; 
+    height: 25vh;
+    width: 100vw;
     box-shadow: 0px -2px 15px rgb(204, 204, 204);
   }
 
@@ -208,22 +195,39 @@ img {
   }
 
   #up-button {
-    position: fixed; 
-    bottom: 7vh; 
-    left: 80vw;  
-    transition: opacity 1s; 
+    position: fixed;
+    bottom: 7vh;
+    left: 80vw;
+    transition: opacity 1s;
   }
 
+  .collapse {
+    background-color: rgb(71, 70, 70);
+    color: white;
+    font-size: 1.1em;
+    width: 100%;
+    border: none;
+  }
+
+  .active,
+  .collapse:hover {
+    background-color: rgb(105, 105, 105);
+  }
+
+  .collapse-text {
+    display: none;
+    background: transparent;
+  }
 }
 
 @media screen and (min-width: 451px) {
 
-  .container { 
-    display: grid; 
-    width: 100vw; 
-    margin: auto; 
+  .container {
+    display: grid;
+    width: 100vw;
+    margin: auto;
     grid-template-columns: 100vw;
-    grid-template-rows: auto 10vh; 
+    grid-template-rows: auto 10vh;
     grid-template-areas:
     "content"
     "footer";
@@ -231,33 +235,36 @@ img {
   }
 
   #hdr{
-    grid-area: hdr; 
-    position: fixed; 
-    width: 100vw; 
-    padding: 3vh 0;  
+    grid-area: hdr;
+    position: fixed;
+    height: 12vh;
+    width: 100vw;
+    padding: 3vh 0;
     background-color: rgb(34, 121, 235);
-    transition: 0.3s; 
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
   }
 
 #brand-logo {
-  display: flex; 
+  display: flex;
   justify-content: center;
-  text-decoration: none; 
+  text-decoration: none;
   font-family: "Dela Gothic One", cursive;
-  color: #fff; 
-  font-size: 1.2em; 
+  color: #fff;
+  font-size: 1.2em;
 }
   
-  #navbar {
-    display: flex;  
-    justify-content: center;
-    background-color: rgb(34, 121, 235);    
-    position: fixed; 
-    width: 100vw; 
-  }
+#navbar {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  position: fixed;
+  width: 100vw;
+}
+
 
   ul {
-    padding: 0; 
+    padding: 0;
   }
 
   li {
@@ -269,36 +276,35 @@ img {
   li a {
     text-decoration: none;
     display: inline-flex;
-    color: white; 
+    color: white;
   }
-
-  #hdr {
-    grid-area: hdr;
-    font-family: 'Montserrat', sans-serif;
+  .highlight {
+    font-weight: bolder;
+    font-size: 1.2em;
   }
 
   #content {
     grid-area: content;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: auto; 
+    width: 100vw;
+    grid-template-columns: auto;
     grid-template-rows: repeat(3, 100vh);
     grid-template-areas:
     "content1"
     "content2"
     "content3";
-    margin: 0px; 
+    margin: 0px;
     justify-content: center;
   }
 
   #content1 {
     grid-area: content1;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: 25vw 70vw; 
+    width: 100vw;
+    grid-template-columns: 25vw 70vw;
     grid-template-rows: 100vh;
     grid-template-areas:
-    "text1 elephant1"; 
+    "text1 elephant1";
     background: linear-gradient(skyblue, 92%, springgreen);
   }
 
@@ -307,14 +313,14 @@ img {
   }
   
   #text1 {
-    grid-area: text1; 
+    grid-area: text1;
   }
 
   #content2 {
     grid-area: content2;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: 70vw 25vw; 
+    width: 100vw;
+    grid-template-columns: 70vw 25vw;
     grid-template-rows: 100vh;
     grid-template-areas:
     "elephant2 text2"; 
@@ -326,19 +332,17 @@ img {
   }
   
   #text2 {
-    grid-area: text2; 
-
+    grid-area: text2;
   }
-
 
   #content3 {
     grid-area: content3;
     display: grid;
-    width: 100vw; 
-    grid-template-columns: 25vw 70vw; 
+    width: 100vw;
+    grid-template-columns: 25vw 70vw;
     grid-template-rows: 100vh;
     grid-template-areas:
-    "text3 elephant3"; 
+    "text3 elephant3";
     background-color: pink; /*rgb(252, 109, 133);*/
   }
 
@@ -347,25 +351,25 @@ img {
   }
   
   #text3 {
-    grid-area: text3; 
+    grid-area: text3;
   }
 
   .content-img {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   }
 
   #footer {
-    grid-area: footer; 
+    grid-area: footer;
     display: flex;
     align-items: center;
     flex-direction: column;
-    bottom: 0; 
+    bottom: 0;
     background-color: #fff;
-    height: 25vh; 
-    width: 100vw; 
+    height: 25vh;
+    width: 100vw;
     box-shadow: 0px -2px 15px rgb(204, 204, 204);
   }
 
@@ -376,6 +380,31 @@ img {
   
   .ftr-icon-pad:hover {
     color: rgb(31, 30, 30);
+  }
+
+  #up-button {
+    position: fixed;
+    bottom: 7vh;
+    left: 90vw;
+    transition: opacity 1s;
+  }
+
+  .collapse {
+    background-color: rgb(71, 70, 70);
+    color: white;
+    font-size: 1.1em;
+    width: 100%;
+    border: none;
+  }
+
+  .active,
+  .collapse:hover {
+    background-color: rgb(105, 105, 105);
+  }
+
+  .collapse-text {
+    display: none;
+    background: transparent;
   }
 }
 

@@ -11,41 +11,44 @@
 
 <body>
 
-   <header id="hdr">
-    <a href="#" id="brand-logo">PNW Brand</a>
-    <!--Creating div for dynamic creation of nav items-->
-    
+<header id="hdr">
+  <a href="#" id="brand-logo">PNW Brand</a>
+  <!--Creating div for dynamic creation of nav items-->
   <div id="navbar"></div>
-  </header>
+</header>
 
 <div class="container">  
   <section id="content">
-      <div id="content1" class="content-section content-img"> <!--content-section used to populate the dynamic nav bar-->
-        <img src="multimedia/images/elephant-R.png" alt="element facing left" id="elephant1">
-        <div id="text1" class="content-font center-align">
-          <h2>Content 1</h2>
-          <p>When you come to a fork in the road, take it.</p>
+    <div id="content1" class="content-section content-img"> <!--content-section used to populate the dynamic nav bar-->
+      <img src="multimedia/images/elephant-R.png" alt="element facing left" id="elephant1">
+      <div id="text1" class="content-font center-align">
+        <button type="button" class="collapse">Content 1</button>
+        <div id="collapse1" class="collapse-text">
+          <p >When you come to a fork in the road, take it.</p>
         </div>
       </div>
-      <div id="content2" class="content-section content-img">
-        <img src="multimedia/images/elephant-L.png" alt="element facing straight" id="elephant2">
-        <div id="text2" class="content-font center-align">
-          <h2>Content 2</h2>
+    </div>
+    <div id="content2" class="content-section content-img">
+      <img src="multimedia/images/elephant-L.png" alt="element facing straight" id="elephant2">
+      <div id="text2" class="content-font center-align">
+        <button type="button" class="collapse">Content 2</button>
+        <div id="collapse2" class="collapse-text">
           <p>You can observe a lot just by watching.</p>
         </div>
       </div>
+    </div>
       <div id="content3" class="content-section content-img">
         <img src="multimedia/images/elephant-S.png" alt="element facing right" id="elephant3">
         <div id="text3" class="content-font center-align">
-          <h2>Content 3</h2>
-          <p>If you don't know where you're going, you'll end up somewhere else.</p>
+          <button type="button" class="collapse">Content 3</button>
+          <div id="collapse3" class="collapse-text">
+            <p>If you don't know where you're going, you'll end up somewhere else.</p>
+          </div>
         </div>
       </div>
-      
   </section>
 
- 
-  <footer id="footer"> <!--Will be on all pages except subscribe page-->
+  <footer id="footer"> 
       <h3>Contact</h3>
       <div id="display-inline">
         <a href="https://github.com/FreudCat/personal-blog"><i class="fab fa-github-square fa-2x ftr-icon-pad"></i></a>
@@ -55,14 +58,15 @@
     </footer>
 
 </div> <!--End Container Div-->
-<div>
-  <a onclick="onClickScroll()"><i class="fas fa-chevron-circle-up hide-button" id="up-button"></i>
-  </a>
+
+<div> <!--Button shows up under the page fold-->
+  <a onclick="onClickScroll()"><i class="fas fa-chevron-circle-up hide-button" id="up-button"></i></a>
 </div>
 
-  <script src="js/app.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 
 </html>
 
-<!--Images by Three-shots from Pixabay -->
+<!--Images by Three-shots from Pixabay-->
