@@ -9,6 +9,7 @@ p {
 }
 
 button,
+h4,
 h3,
 p,
 a {
@@ -100,12 +101,12 @@ img {
     display: grid;
     width: 100vw;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, 100vh);
+    grid-template-rows: repeat(3, 100vh) auto;
     grid-template-areas:
     "content1"
     "content2"
-    "content3";
-    margin: 0px;
+    "content3"
+    "content4";
     justify-content: center;
   }
 
@@ -166,6 +167,61 @@ img {
     grid-area: text3;
   }
 
+  #content4 {
+    grid-area: content4;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 50vw; 
+    grid-template-rows: 50vh;
+    grid-template-areas:
+    "form"; 
+    background-image: linear-gradient(rgb(19, 43, 68), rgb(62, 79, 114));
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form {
+    grid-area: form; 
+    color: white; 
+  }
+ 
+  .user-input {
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff; 
+  }
+
+  #form-button {
+    margin-top: 15px; 
+    border-radius: 5px; 
+    background-color: transparent;
+    border: 1px rgb(204, 204, 204) solid; 
+    color: rgb(204, 204, 204); 
+  }
+
+  #form-button:hover {
+    border: 1px white solid; 
+    color: #fff; 
+  }
+
+  #form-button:active{
+    border: 1px rgb(61, 61, 61) solid; 
+    color: rgb(61, 61, 61); 
+  }
+
+  .no-focus:focus {  /*removing the border when the input areas are in focus*/
+  outline: none; 
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    color: #fff; 
+    display: flex; 
+    }
+  
   .content-img {
   display: flex; 
   flex-direction: row;
@@ -262,7 +318,6 @@ img {
   width: 100vw;
 }
 
-
   ul {
     padding: 0;
   }
@@ -288,11 +343,12 @@ img {
     display: grid;
     width: 100vw;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, 100vh);
+    grid-template-rows: repeat(3, 100vh) auto;
     grid-template-areas:
     "content1"
     "content2"
-    "content3";
+    "content3"
+    "content4";
     margin: 0px;
     justify-content: center;
   }
@@ -352,6 +408,61 @@ img {
   
   #text3 {
     grid-area: text3;
+  }
+
+  #content4 {
+    grid-area: content4;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 40vw; 
+    grid-template-rows: 50vh;
+    grid-template-areas:
+    "form"; 
+    background-image: linear-gradient(rgb(19, 43, 68), rgb(62, 79, 114));
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form {
+    grid-area: form; 
+    color: white; 
+  }
+  
+  .user-input {
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff; 
+  }
+
+  #form-button {
+    margin-top: 15px; 
+    border-radius: 5px; 
+    background-color: transparent;
+    border: 1px rgb(204, 204, 204) solid; 
+    color: rgb(204, 204, 204); 
+  }
+
+  #form-button:hover {
+    border: 1px white solid; 
+    color: #fff; 
+  }
+
+  #form-button:active{
+    border: 1px rgb(61, 61, 61) solid; 
+    color: rgb(61, 61, 61); 
+  }
+
+  .no-focus:focus {  /*removing the border when the input areas are in focus*/
+    outline: none; 
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    color: #fff; 
+    display: flex;
   }
 
   .content-img {
