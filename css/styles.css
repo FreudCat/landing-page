@@ -52,7 +52,7 @@ img {
     width: 100vw;
     height: 12vh;
     padding: 3vh 0;
-    background-color: rgb(34, 121, 235);
+    background-image: linear-gradient(rgb(34, 121, 235), 90%, skyblue);     
     transition: 0.4s;
     font-family: 'Montserrat', sans-serif;
   }
@@ -240,7 +240,7 @@ img {
     height: 12vh;
     width: 100vw;
     padding: 3vh 0;
-    background-color: rgb(34, 121, 235);
+    background-image: linear-gradient(rgb(34, 121, 235), 90%, skyblue); 
     transition: 0.3s;
     font-family: 'Montserrat', sans-serif;
   }
