@@ -387,7 +387,6 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "text1 elephant1";
-    background: linear-gradient(skyblue, 92%, springgreen);
   }
 
   #elephant1 {
@@ -406,7 +405,6 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "elephant2 text2"; 
-    background: linear-gradient(springgreen, 93%, pink);
   }
 
   #elephant2 {
@@ -425,7 +423,6 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "text3 elephant3";
-    background-color: pink; /*rgb(252, 109, 133);*/
   }
 
   #elephant3 {
