@@ -4,6 +4,15 @@ body {
   margin: 0;
 }
 
+.active-section {
+  background-image: linear-gradient(rgb(255, 255, 255), 90%, rgb(31, 31, 31)); 
+}
+
+.inactive-section {
+  background:rgb(31, 31, 31); 
+}
+
+
 p {
   margin:0;
 }
@@ -33,6 +42,24 @@ img {
   opacity: 0;
   transition: opacity 1s;
 }
+
+.show-content {
+  opacity: 1;
+  transition: opacity 1s;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 450px) {
 
@@ -82,13 +109,14 @@ img {
   li {
     list-style: none;
     display: inline-flex;
-    padding: 0 20px; /*separates out the links*/
+    padding: 0 10px; /*separates out the links*/
     
   }
   li a {
     text-decoration: none;
     display: inline-flex;
     color: white;
+    font-size: 0.8em; 
   }
 
   .highlight {
@@ -118,11 +146,12 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "text1 elephant1";
-    background: linear-gradient(skyblue, 92%, springgreen);
+
   }
 
   #elephant1 {
-    grid-area: elephant1;
+    grid-area: elephant1; 
+     
   }
   
   #text1 {
@@ -137,7 +166,6 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "elephant2 text2";
-    background: linear-gradient(springgreen, 93%, pink);
   }
 
   #elephant2 {
@@ -156,7 +184,6 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "text3 elephant3"; 
-    background-color: pink; /*rgb(252, 109, 133);*/
   }
 
   #elephant3 {
@@ -172,7 +199,7 @@ img {
     display: grid;
     width: 100vw;
     grid-template-columns: 50vw; 
-    grid-template-rows: 50vh;
+    grid-template-rows: 80vh;
     grid-template-areas:
     "form"; 
     background-image: linear-gradient(rgb(19, 43, 68), rgb(62, 79, 114));
@@ -180,7 +207,7 @@ img {
     align-items: center;
   }
 
-  #form {
+  #elephant4 {
     grid-area: form; 
     color: white; 
   }
@@ -326,7 +353,6 @@ img {
     list-style: none;
     display: inline-flex;
     padding: 0 20px; /*separates out the links*/
-    
   }
   li a {
     text-decoration: none;
@@ -343,7 +369,7 @@ img {
     display: grid;
     width: 100vw;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, 100vh) auto;
+    grid-template-rows: repeat(4, 100vh);
     grid-template-areas:
     "content1"
     "content2"
@@ -415,7 +441,7 @@ img {
     display: grid;
     width: 100vw;
     grid-template-columns: 40vw; 
-    grid-template-rows: 50vh;
+    grid-template-rows: 100vh;
     grid-template-areas:
     "form"; 
     background-image: linear-gradient(rgb(19, 43, 68), rgb(62, 79, 114));
@@ -423,7 +449,7 @@ img {
     align-items: center;
   }
 
-  #form {
+  #elephant4 {
     grid-area: form; 
     color: white; 
   }
