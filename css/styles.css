@@ -5,13 +5,12 @@ body {
 }
 
 .active-section {
-  background-image: linear-gradient(rgb(255, 255, 255), 90%, rgb(31, 31, 31)); 
+  background-image: linear-gradient(#e4e4e4, 90%,#1f1f1f); 
 }
 
 .inactive-section {
-  background:rgb(31, 31, 31); 
+  background: #1f1f1f; 
 }
-
 
 p {
   margin:0;
@@ -43,24 +42,6 @@ img {
   transition: opacity 1s;
 }
 
-.show-content {
-  opacity: 1;
-  transition: opacity 1s;   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 450px) {
 
   .container {
@@ -80,7 +61,7 @@ img {
     width: 100vw;
     height: 12vh;
     padding: 3vh 0;
-    background-image: linear-gradient(rgb(34, 121, 235), 90%, skyblue);     
+    background-image: linear-gradient(#1f79eb, 90%, #88ceeb);     
     transition: 0.4s;
     font-family: 'Montserrat', sans-serif;
   }
@@ -90,7 +71,7 @@ img {
     justify-content: center;
     text-decoration: none;
     font-family: "Dela Gothic One", cursive;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.2em;
   }
   
@@ -115,7 +96,7 @@ img {
   li a {
     text-decoration: none;
     display: inline-flex;
-    color: white;
+    color: #ffffff;
     font-size: 0.8em; 
   }
 
@@ -146,12 +127,10 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "text1 elephant1";
-
   }
 
   #elephant1 {
-    grid-area: elephant1; 
-     
+    grid-area: elephant1;   
   }
   
   #text1 {
@@ -202,7 +181,7 @@ img {
     grid-template-rows: 80vh;
     grid-template-areas:
     "form"; 
-    background-image: linear-gradient(rgb(19, 43, 68), rgb(62, 79, 114));
+    background-image: linear-gradient(#132b44, #3e4f72);
     justify-content: center;
     align-items: center;
   }
@@ -211,30 +190,30 @@ img {
     grid-area: form; 
     color: white; 
   }
- 
+
   .user-input {
     position: relative;
     font-size: 1.2em;
     color: #fff;
     margin-bottom: 10px;
-    border-bottom: 1px solid #fff; 
+    border-bottom: 1px solid #ffffff; 
   }
 
   #form-button {
     margin-top: 15px; 
     border-radius: 5px; 
     background-color: transparent;
-    border: 1px rgb(204, 204, 204) solid; 
-    color: rgb(204, 204, 204); 
+    border: 1px #cccccc solid; 
+    color: #cccccc; 
   }
 
   #form-button:hover {
-    border: 1px white solid; 
-    color: #fff; 
+    border: 1px #ffffff solid; 
+    color: #ffffff; 
   }
 
   #form-button:active{
-    border: 1px rgb(61, 61, 61) solid; 
+    border: 1px #3d3d3d solid; 
     color: rgb(61, 61, 61); 
   }
 
@@ -245,7 +224,7 @@ img {
   input {
     background: transparent;
     border: none;
-    color: #fff; 
+    color: #ffffff; 
     display: flex; 
     }
   
@@ -262,10 +241,10 @@ img {
     align-items: center;
     flex-direction: column;
     bottom: 0;
-    background-color: #fff;
+    background-color: #ffffff;
     height: 25vh;
     width: 100vw;
-    box-shadow: 0px -2px 15px rgb(204, 204, 204);
+    box-shadow: 0px -2px 15px #cccccc;
   }
 
   .ftr-icon-pad {
@@ -274,7 +253,7 @@ img {
   }
   
   .ftr-icon-pad:hover {
-    color: rgb(5, 5, 5);
+    color: #050505;
   }
 
   #up-button {
@@ -285,8 +264,8 @@ img {
   }
 
   .collapse {
-    background-color: rgb(71, 70, 70);
-    color: white;
+    background-color: #474646;
+    color: #ffffff;
     font-size: 1.1em;
     width: 100%;
     border: none;
@@ -294,7 +273,7 @@ img {
 
   .active,
   .collapse:hover {
-    background-color: rgb(105, 105, 105);
+    background-color: #696969;
   }
 
   .collapse-text {
@@ -323,7 +302,7 @@ img {
     height: 12vh;
     width: 100vw;
     padding: 3vh 0;
-    background-image: linear-gradient(rgb(34, 121, 235), 90%, skyblue); 
+    background-image: linear-gradient(#2279eb, 90%, #87ceeb); 
     transition: 0.3s;
     font-family: 'Montserrat', sans-serif;
   }
@@ -333,7 +312,7 @@ img {
   justify-content: center;
   text-decoration: none;
   font-family: "Dela Gothic One", cursive;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.2em;
 }
   
@@ -357,7 +336,7 @@ img {
   li a {
     text-decoration: none;
     display: inline-flex;
-    color: white;
+    color: #ffffff;
   }
   .highlight {
     font-weight: bolder;
@@ -441,40 +420,40 @@ img {
     grid-template-rows: 100vh;
     grid-template-areas:
     "form"; 
-    background-image: linear-gradient(rgb(19, 43, 68), rgb(62, 79, 114));
+    background-image: linear-gradient(#132b44, #3e4f72);
     justify-content: center;
     align-items: center;
   }
 
   #elephant4 {
     grid-area: form; 
-    color: white; 
+    color: #ffffff; 
   }
   
   .user-input {
     position: relative;
     font-size: 1.2em;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 10px;
-    border-bottom: 1px solid #fff; 
+    border-bottom: 1px solid #ffffff; 
   }
 
   #form-button {
     margin-top: 15px; 
     border-radius: 5px; 
     background-color: transparent;
-    border: 1px rgb(204, 204, 204) solid; 
-    color: rgb(204, 204, 204); 
+    border: 1px #cccccc solid; 
+    color: #cccccc; 
   }
 
   #form-button:hover {
-    border: 1px white solid; 
-    color: #fff; 
+    border: 1px #ffffff solid; 
+    color: #ffffff; 
   }
 
   #form-button:active{
-    border: 1px rgb(61, 61, 61) solid; 
-    color: rgb(61, 61, 61); 
+    border: 1px #3d3d3d solid; 
+    color: #3d3d3d; 
   }
 
   .no-focus:focus {  /*removing the border when the input areas are in focus*/
@@ -484,7 +463,7 @@ img {
   input {
     background: transparent;
     border: none;
-    color: #fff; 
+    color: #ffffff; 
     display: flex;
   }
 
@@ -501,10 +480,10 @@ img {
     align-items: center;
     flex-direction: column;
     bottom: 0;
-    background-color: #fff;
+    background-color: #ffffff;
     height: 25vh;
     width: 100vw;
-    box-shadow: 0px -2px 15px rgb(204, 204, 204);
+    box-shadow: 0px -2px 15px #cccccc;
   }
 
   .ftr-icon-pad {
@@ -524,8 +503,8 @@ img {
   }
 
   .collapse {
-    background-color: rgb(71, 70, 70);
-    color: white;
+    background-color: #474646;
+    color: #ffffff;
     font-size: 1.1em;
     width: 100%;
     border: none;
@@ -533,7 +512,7 @@ img {
 
   .active,
   .collapse:hover {
-    background-color: rgb(105, 105, 105);
+    background-color: #696969;
   }
 
   .collapse-text {

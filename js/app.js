@@ -16,80 +16,6 @@ for (let i = 0; i < collapseButton.length; i++) {
   })
 }
 
-
-
-
-
-
-
-//creating active content 
-
-// window.addEventListener("scroll", function () {
-//   for (let i=0; i<contentSection.length; i++) {
-//     var fade = document.getElementById(contentSection[i].id); 
-//     if (contentInView(fade) === true) {
-//       if (contentSection[i].id == "content1") {
-//       }
-//       else if (contentSection[i].id == "content2") {
-//         fadeIn(fade); 
-//       }
-//       else if (contentSection[i].id == "content3") {
-//         fadeIn(fade); 
-//       }
-//       else {
-//       }
-//     }
-//     else {
-//       fadeOut(fade); 
-//     }
-//   }
-// })
-
-
-
-
-
-function fadeIn(fade) { //fade in slowly 
-  var intervalID = setInterval(function() {
-      if (opacity < 1) { //if the value is less than 1, it will keep running an add 0.1 until it reaches 1. 
-          opacity = opacity + 0.2; 
-          fade.style.opacity = opacity; //once opacity =1, it will set the style for this div id 
-      } else {
-          clearInterval(intervalID); //clears the interval to restart 
-      }
-  }, 200); //runs over 200 ms 
-}
-
-function fadeOut(fade) {
-var intervalOutID = setInterval(function() {
-  if (fade.style.opacity > 0) { //if the opacity is at all visible (great than 0), then it will keep running and subtract 0.1 from each value 
-    opacity = opacity - 0.2; 
-    fade.style.opacity = Math.round(opacity); //once it is 0, it will set the opacity and stop running 
-  }
-  else {
-    clearInterval(intervalOutID); 
-  }
-}, 200); //runs over two ms 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Function dynamically populates the nav bar 
 function createDynamicNav() {
   const navLinks = document.querySelectorAll("button");
@@ -152,12 +78,11 @@ window.addEventListener("scroll", function () {
     let fade = document.getElementById(contentSection[i].id); 
     if (contentInView(contentSection[i]) === true) {
       activeLink[i].classList.add("highlight"); //note that there is no period prior to the class since you are specifically saying to add it as a class!
-      contentSection[i].classList.remove("inactive-section");
-      contentSection[i].classList.add("active-section");
+      contentSection[i].classList.remove("inactive-section"); //when section is in viewport, inactive-section class is removed
+      contentSection[i].classList.add("active-section"); //when section is in viewport, active-section class is added 
       
       if (contentSection[i].id == "content1") {
-        hdrColor.style.backgroundImage = "linear-gradient(rgb(34, 121, 235), 90%, skyblue)";
-         
+        hdrColor.style.backgroundImage = "linear-gradient(rgb(34, 121, 235), 90%, skyblue)";  
       }
       else if (contentSection[i].id == "content2") {
         hdrColor.style.backgroundImage = "linear-gradient(rgb(0, 146, 73), 90%, springgreen)";
@@ -167,13 +92,12 @@ window.addEventListener("scroll", function () {
       }
       else {
         hdrColor.style.backgroundImage = "linear-gradient(rgb(19, 43, 68), 90%, rgb(25, 56, 88))";
-        
       }
     }
     else {
       activeLink[i].classList.remove("highlight");
-      contentSection[i].classList.remove("active-section")
-      ;contentSection[i].classList.add("inactive-section")
+      contentSection[i].classList.remove("active-section") //remove active status when outside viewport
+      ;contentSection[i].classList.add("inactive-section") //add inactive status with different background when outside of viewport 
       ;
     }
   }
