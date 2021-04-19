@@ -7,11 +7,11 @@ This project utilizes **JavaScript**, **HTML**, and **CSS** to create a simple l
 - Add active class to sections when in viewport 
 - Add more information to README file 
 - Add a fourth section to the content section 
+- Add a cross-browser solution for getting innerHeight for IE8 and earlier 
 
 ## Usage 
 - JavaScript: ES6
 - HTML: HTML 5
-
 
 ## Installation 
 git clone https://github.com/FreudCat/landing-page.git

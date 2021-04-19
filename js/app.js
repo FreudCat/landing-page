@@ -54,15 +54,15 @@ function scrollToTop() { //shows button that that scrolls to top under the fold
 const upButton = document.getElementById("up-button"); 
 upButton.addEventListener("click", function(event) {
   event.preventDefault(); 
-  console.log("up button click"); //for testing purposes
   document.getElementById("content1").scrollIntoView({ behavior: "smooth" });
 }); 
 
 function contentInView(content) { //function will determine if content section is in view 
   let position = content.getBoundingClientRect(); //run console.log(position); to see the values of position.top, position.bottom, etc and use for the expressions below
+  console.log(window.innerHeight); 
   return (
-    position.top <= window.innerHeight * .22 &&
-    (position.bottom <= window.innerHeight * 1.3 && position.bottom > window.innerHeight * .22)
+    position.top <= (window.innerHeight * 0.22 || document.documentElement.clientHeight * 0.22) &&
+    (position.bottom <= window.innerHeight * 1.3 || document.documentElement.clientHeight * 1.3 && position.bottom > window.innerHeight * 0.22 || document.documentElement.clientHeight * 0.22) //use || document.documentElement.clientHeight for compatibility with IE8 and earlier 
   ); //returns boolean True if the content is in viewport or False if not
 }
 
