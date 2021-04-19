@@ -2,12 +2,14 @@
 This project utilizes **JavaScript**, **HTML**, and **CSS** to create a simple landing page. The content contains placeholder texts since the emphasis is on interactivity and style elements. 
 
 ## Version 2.0 
-### Bug Fixes and Updates 
+### Bug Fixes, Updates, and Cleanup  
 - Fix smooth scrolling: all navigation links and up button scroll, rather than jump, to target 
 - Add active class to sections when in viewport 
 - Add more information to README file 
 - Add a fourth section to the content section 
 - Add a cross-browser solution for getting innerHeight for IE8 and earlier 
+- Standardize colors from rbg to hex, remove trailing spaces
+- Re-order functions and css selectors to make it easier for readers to follow 
 
 ## Usage 
 - JavaScript: ES6

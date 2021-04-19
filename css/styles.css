@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat&display=swap);
+
 /*styles used by all viewport sizes */
 body {
   margin: 0;
@@ -59,7 +60,7 @@ img {
     justify-content: center;
   }
 
-  #hdr{
+  #hdr {
     position: fixed;
     width: 100vw;
     height: 12vh;
@@ -96,6 +97,7 @@ img {
     padding: 0 10px; /*separates out the links*/
     
   }
+
   li a {
     text-decoration: none;
     display: inline-flex;
@@ -221,7 +223,7 @@ img {
   }
 
   .no-focus:focus {  /*removing the border when the input areas are in focus*/
-  outline: none; 
+    outline: none; 
   }
 
   input {
@@ -229,13 +231,13 @@ img {
     border: none;
     color: #ffffff; 
     display: flex; 
-    }
+  }
   
   .content-img {
-  display: flex; 
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   #footer {
@@ -310,22 +312,22 @@ img {
     font-family: 'Montserrat', sans-serif;
   }
 
-#brand-logo {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  font-family: "Dela Gothic One", cursive;
-  color: #ffffff;
-  font-size: 1.2em;
-}
+  #brand-logo {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Dela Gothic One", cursive;
+    color: #ffffff;
+    font-size: 1.2em;
+  }
   
-#navbar {
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-  position: fixed;
-  width: 100vw;
-}
+  #navbar {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+  }
 
   ul {
     padding: 0;
@@ -336,11 +338,13 @@ img {
     display: inline-flex;
     padding: 0 20px; /*separates out the links*/
   }
+
   li a {
     text-decoration: none;
     display: inline-flex;
     color: #ffffff;
   }
+
   .highlight {
     font-weight: bolder;
     font-size: 1.2em;
@@ -454,7 +458,7 @@ img {
     color: #ffffff; 
   }
 
-  #form-button:active{
+  #form-button:active {
     border: 1px #3d3d3d solid; 
     color: #3d3d3d; 
   }
@@ -471,10 +475,10 @@ img {
   }
 
   .content-img {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   #footer {
@@ -523,4 +527,3 @@ img {
     background: transparent;
   }
 }
-
