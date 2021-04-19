@@ -1,5 +1,4 @@
 const contentSection = document.querySelectorAll(".content-section"); //selects all of the content-section class and populates them into a node list that looks like array, but is NOT array.
-let opacity = 0;
 
 //Creates collapsible divs 
 let collapseButton = document.getElementsByClassName("collapse");
@@ -24,11 +23,17 @@ function createDynamicNav() {
   for (let i = 0; i < contentSection.length; i++) {//iterate through the nodelist for contentSection
     let createNavLinks = document.createElement("li"); //creates an <li> node
     let createAnchorTag = document.createElement("a"); //creats an <a> (anchor) node
+    createAnchorTag.id = ("link" + (i+1)); //IMPORTANT: Assign a unique id to each anchor tag as it is being created so that it can be selected later
     createNavLinks.appendChild(createAnchorTag); //appends the anchor tag between each <li></li> 
-    let linkName = navLinks[i].innerHTML; //takes the text WITHIN the h2 tags that makes up the content titles
-
-    createAnchorTag.href = ("#content" + (i + 1)); //output is content1, content2, content3, content4 as for loop iterates through
-    createAnchorTag.textContent = `${linkName}`;
+    let linkName = navLinks[i].innerHTML; //takes the text WITHIN the h2 tags that makes up the content titles 
+   createAnchorTag.href = (`#${contentSection[i].id}`); //output is content1, content2, content3, content4 as for loop iterates through
+    createAnchorTag.textContent = linkName;
+    createAnchorTag.addEventListener("click", function (e) {
+      e.preventDefault(); 
+      console.log(createAnchorTag.id); //for testing purposes
+      contentSection[i].scrollIntoView({behavior: 'smooth'}); 
+    }); //IMPORTANT: this adds an event listener to each anchor tag as they are being created. 
+    console.log(createAnchorTag); 
     createNavUL.appendChild(createNavLinks);
   }
   navbar.appendChild(createNavUL);
@@ -46,9 +51,12 @@ function scrollToTop() { //shows button that that scrolls to top under the fold
   }
 }
 
-function onClickScroll() { //function is called when the scrolltotop button is clicked
-  document.getElementById("content1").scrollIntoView({ behavior: "smooth" })
-}
+const upButton = document.getElementById("up-button"); 
+upButton.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  console.log("up button click"); //for testing purposes
+  document.getElementById("content1").scrollIntoView({ behavior: "smooth" });
+}); 
 
 function contentInView(content) { //function will determine if content section is in view 
   let position = content.getBoundingClientRect(); //run console.log(position); to see the values of position.top, position.bottom, etc and use for the expressions below
@@ -73,8 +81,6 @@ window.addEventListener("scroll", function () {
   const activeLink = document.querySelectorAll("li");
 
   for (let i = 0; i < contentSection.length; i++) {
-    console.log("Main log"); 
-    console.log(contentSection[i]); 
     let fade = document.getElementById(contentSection[i].id); 
     if (contentInView(contentSection[i]) === true) {
       activeLink[i].classList.add("highlight"); //note that there is no period prior to the class since you are specifically saying to add it as a class!
@@ -108,15 +114,18 @@ window.addEventListener("scroll", function () {
 function scrollToContent(card) {
   let contentID; // used variable type "let" since it will be changed depending on what the user clicked
   if (card == "card1") {
-    contentID = document.getElementById("content1");
+    contentID = document.querySelector("#content1");
+    console.log("card1"); 
   }
   else if (card == "card2") {
-    contentID = document.getElementById("content2");
+    contentID = document.querySelector("#content2");
+    console.log("card1"); 
   }
   else {
-    contentID = document.getElementById("content3");
+    contentID = document.querySelector("#content3");
+    console.log("card1"); 
   }
-  contentID.scrollIntoView({ behavior: "smooth" });
+  contentID.scrollIntoView({behavior: "smooth"});
 }
 
 createDynamicNav();

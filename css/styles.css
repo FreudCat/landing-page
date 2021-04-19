@@ -2,7 +2,10 @@
 /*styles used by all viewport sizes */
 body {
   margin: 0;
+  scroll-behavior: smooth;
 }
+
+html { scroll-behavior: smooth; }
 
 .active-section {
   background-image: linear-gradient(#e4e4e4, 90%,#1f1f1f); 
